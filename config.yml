@@ -1,0 +1,13 @@
+base:
+    hostname: localhost
+    port: 5000
+    basepath: /backend
+
+input:
+    template: ../site/templates
+    articles: ../site/articles
+    pages: ./pages
+
+templates:
+  pages: page.cshtml
+  articles: Article

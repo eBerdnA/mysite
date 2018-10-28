@@ -1,0 +1,22 @@
+@model StatCoreBlog.IndexViewModel
+
+@{
+	Layout = "./Shared/_Layout.cshtml";
+}
+
+@foreach(var article in @Model.Articles)
+{
+    <h1><a href="@article.Link">@article.Header.Title</a></h1>
+}
+<div>
+    @if (@Model.HasNewer == true)
+    {
+        <a href="@Model.NewerLink">Newer</a>
+    }
+</div>
+<div>
+    @if (@Model.HasOlder == true)
+    {
+        <a href="@Model.OlderLink">Older</a>
+    }
+</div>

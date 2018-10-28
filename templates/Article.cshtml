@@ -1,0 +1,10 @@
+@model StatCoreBlog.ArticleViewModel
+
+@{
+	Layout = "./Shared/_Layout.cshtml";
+}
+
+<h1>Title: @Model.Header.Title</h1>
+<h2>Created: @Model.CreationDate</h2>
+
+@Html.Raw(@Model.Content)

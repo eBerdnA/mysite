@@ -1,0 +1,8 @@
+title: My site title
+posts-per-page: 5
+templates:
+  index: Index.cshtml
+  pages: page.cshtml
+  articles: article.cshtml
+copy:
+  - ../site/templates/css
