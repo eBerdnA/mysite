@@ -1,4 +1,4 @@
-title: My site title
+title: andre.bering.in
 posts-per-page: 5
 templates:
   index: Index.cshtml

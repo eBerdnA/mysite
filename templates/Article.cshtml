@@ -2,9 +2,20 @@
 
 @{
 	Layout = "./Shared/_Layout.cshtml";
+	ViewBag.Title = @Model.Header.Title;
 }
 
-<h1>Title: @Model.Header.Title</h1>
-<h2>Created: @Model.CreationDate</h2>
-
-@Html.Raw(@Model.Content)
+<div class="row">
+    <div class="col-sm-8 blog-main">
+        <div class="blog-post">
+            <h2 class="blog-post-title"><a href="@Model.Link">@Model.Header.Title</a></h2>
+            <div class="blog-post-meta">
+                @Model.CreationDate
+            </div>
+            @Html.Raw(@Model.Content)
+        </div>
+    </div>
+    <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+    @Html.Partial("Sidebar")
+    </div>
+</div>

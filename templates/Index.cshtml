@@ -2,21 +2,39 @@
 
 @{
 	Layout = "./Shared/_Layout.cshtml";
+    ViewBag.Title = @Model.SiteTitle;
 }
 
-@foreach(var article in @Model.Articles)
-{
-    <h1><a href="@article.Link">@article.Header.Title</a></h1>
-}
-<div>
-    @if (@Model.HasNewer == true)
+<div class="row">
+    <div class="col-sm-8 blog-main">
+    @foreach(var article in @Model.Articles)
     {
-        <a href="@Model.NewerLink">Newer</a>
+        <div class="blog-post">
+            <h2 class="blog-post-title"><a href="@article.Link">@article.Header.Title</a></h2>
+            <div class="blog-post-meta">
+                @article.CreationDate
+            </div>
+            @Html.Raw(@article.Content)
+        </div>
     }
+    </div>
+    <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+    @Html.Partial("Sidebar")
+    </div>
 </div>
-<div>
-    @if (@Model.HasOlder == true)
-    {
-        <a href="@Model.OlderLink">Older</a>
-    }
-</div>
+<div class="row">
+    <div class="col-sm-8 blog-main">
+        <div>
+            @if (@Model.HasNewer == true)
+            {
+                <a href="@Model.NewerLink">Newer</a>
+            }
+        </div>
+        <div>
+            @if (@Model.HasOlder == true)
+            {
+                <a href="@Model.OlderLink">Older</a>
+            }
+        </div>
+    </div>
+</div>  
