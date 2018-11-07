@@ -4,8 +4,8 @@ base:
     basepath: /backend
 
 input:
-    template: ../site/templates
-    articles: ../site/articles
+    template: ./templates
+    articles: ./articles
     pages: ./pages
 
 templates:

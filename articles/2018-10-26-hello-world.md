@@ -1,5 +1,6 @@
 ---
 title: Hello World - StatCoreBlog
+creation: 2018-10-26
 published: true
 ---
 For reasons I just wanted to have my own static site generator because there are not enough available right now. [/s](https://www.urbandictionary.com/define.php?term=%2Fs)
